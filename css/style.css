@@ -48,6 +48,7 @@ header .logo {
   justify-content: center;
   align-items: center;
   margin-left: 10px;
+  padding: 0 auto;
 }
 
 nav {
