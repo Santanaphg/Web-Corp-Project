@@ -101,6 +101,15 @@
   left: 10%;
 }
 
+.arrowLeft{
+  margin-left: 450px;
+  z-index: -1;
+}
+
+iframe:hover>.arrowLeft{
+  margin-right: -450px;
+}
+
 .arrowLeft img{
   position: relative;
   width: 180px;
