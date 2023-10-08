@@ -1,9 +1,28 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
   text-decoration: none;
-  list-style: none;
   box-sizing: border-box;
+}
+
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* body{
@@ -44,7 +63,7 @@
 
 .containerCover .containerInfo {
   margin: 0;
-  margin-top: 15px;
+  margin-top: .9375rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -55,7 +74,7 @@
 }
 
 .containerCover h1 {
-  padding: 5px 0px;
+  padding: .3125rem 0px;
   font-size: 3em;
   font-weight: 900;
   color: rgb(242, 174, 29);
@@ -79,11 +98,11 @@
   border: 0.3rem solid rgb(82, 79, 79);
   position: relative;
   left: 27%;
-  width: 50%;
-  height: 500px;
-  box-shadow: 0px 10px 25px rgb(154, 152, 152);
-  border-radius: 5px;
-  margin-top: 10px;
+  width: 45rem;
+  height: 25rem;
+  box-shadow: 0px .625rem 1.5625rem rgb(154, 152, 152);
+  border-radius: .3125rem;
+  margin-top: .625rem;
   user-select: none;
 
 }
@@ -105,7 +124,7 @@
 
 .arrowLeft img {
   position: relative;
-  width: 160px;
+  width: 10rem;
 }
 
 .arrowRight {
@@ -118,14 +137,14 @@
 
 .arrowRight img {
   position: relative;
-  width: 160px;
+  width: 10rem;
   /* animation: moveArrowRight  6s ease infinite; */
 
 }
 
 .address {
   background-color: rgb(240, 78, 39);
-  box-shadow: 3px 5px 20px rgba(119, 118, 116, 0.5);
+  box-shadow: .1875rem .3125rem 1.25rem rgba(119, 118, 116, 0.5);
   width: 100%;
   display: flex;
   position: absolute;
@@ -139,7 +158,7 @@
 
 .address h4 {
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   padding: 0;
 }
 

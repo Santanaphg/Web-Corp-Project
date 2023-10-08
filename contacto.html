@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Corp_Web_Project</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contacto.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1a61aafc27.js" crossorigin="anonymous"></script>
+  <script defer src="/js/script.js"></script>
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="containerAll">
+      <div class="logo">
+        <a href="index.html"><img src="assets/img/mbe logo invert.png" alt="logo"></a>
+      </div>
+      <div class="containerNav">
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html" Home</a></li>
+            <li><a href="nosotros.html"> Nosotros</a></li>
+            <li><a href="servicios.html"> Servicios</a>
+              <ul class="submenu">
+                <li><a href="servicio_ebox.html"> e-box®</a></li>
+                <li><a href="#"> Envíos</a></li>
+                <li><a href="#"> Impresión y Fotocopiado</a></li>
+                <li><a href="#"> Envíos Maritimos</a></li>
+                <li><a href="#"> Embalajes</a></li>
+              </ul>
+            </li>
+            <li><a href="ubicacion.html"> Ubicación</a></li>
+            <li><a href="contacto.html" class="active"> Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="container__formulario">
+
+    <h2>Contactanos</h2>
+    
+
+    <form action="" method="post" autocomplete="off">
+
+      <div class="formulario">
+
+        <div class="form__content">
+          <label for="nombre"> Nombre</label>
+          <input type="text" name="nombre" id="" placeholder="Nombre" pattern="[A-Z\sa-z]{3,20}" required=""
+            autocomplete="off" minlength="3" maxlength="20">
+        </div>
+
+        <div class="form__content">
+          <label for="apellido"> Apellido</label>
+          <input type="text" name="apellido" id="" placeholder="Apellido" required="" autocomplete="off"
+            pattern="[A-Z\sa-z]{3,20}">
+        </div>
+
+        <div class="form__content">
+          <label for="mail"> E-mail</label>
+          <input type="mail" name="mail" id="" placeholder="ejemplo@email.com" required="" autocomplete="off">
+        </div>
+
+        <div class="form__content">
+          <label for="telefono"> Telefono</label>
+          <input type="tel" name="telefono" id="" placeholder="Telefono" required="" autocomplete="off">
+        </div>
+
+        <div class="form__content">
+          <label for="opciones">Opciones de Contacto</label>
+          <select class="formulario__select" id="" name="opciones" required>
+            <option value="">Selecciona una opcion</option>
+            <option value="cotizacion">Cotizacion</option>
+            <option value="reclamo">Reclamo</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <divc class="form__content">
+          <label for="message"> Su Mensaje</label>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje"> </textarea>
+      </div>
+
+      <input class="btn" type="submit" name="contact" value="Enviar">
+
+    </form>
+  </div>
+
+
+
+
+  <!--INICIO background-->
+
+  <div class="bgColor"></div>
+  <div class="wave1"></div>
+  <div class="wave2"></div>
+
+  <!--FINAL background-->
+
+  <div class="footer">
+    <footer>
+      <div class="containerFooter">
+        <div class="footerLogo">
+          <img src="assets/img/mbe logo invert.png" alt="logo">
+        </div>
+
+        <div class="socialMedia">
+          <h6>Visitanos en:</h6>
+          <a href="https://www.instagram.com/mbe_zulia/" target="_blank"><i class="fa-brands fa-instagram"
+              style="color: #ffffff;"></i> Instagram</a>
+          <a href="mailto:ventas@mbezulia.com.ve"><i class="fa-solid fa-envelopes-bulk" style="color: #ffffff;"></i>
+            Correo Electronico</a>
+          <a href="https://wa.me/584246472094" target="_blank"><i class="fa-brands fa-whatsapp"
+              style="color: #ffffff;"></i> Whatsapp</a>
+        </div>
+
+        <div class="copyright">
+          <h5> Mail Boxes Etc </h5>
+          <h5> Zulia</h5>
+          <p>Todos los derechos reservados © 2023.</p>
+        </div>
+      </div>
+
+    </footer>
+  </div>
+
+
+
+</body>
+
+</html>

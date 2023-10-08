@@ -1,10 +1,39 @@
+/*RESET CSS*/
+
 * {
   margin: 0;
   padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
   text-decoration: none;
-  *list-style: none;
   box-sizing: border-box;
+}
 
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  *display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+::-moz-selection {
+  background-color: black;
+  color: white;
+}
+::selection {
+  background-color: black;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,6 +41,8 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/*FIN RESET CSS*/
 
 header {
   background-color: rgb(180, 180, 178);
@@ -24,8 +55,7 @@ header {
 }
 
 .containerAll {
-
-  width: 1600px;
+  max-width: 75rem;
   height: 100%;
   position: relative;
   right: 0;
@@ -33,26 +63,23 @@ header {
   display: flex;
   justify-content: space-between;
   margin: auto;
-  padding: 0px, 30px;
+  padding: 0px, 1.875rem;
   box-shadow: -1px 1px 2px black;
   z-index: 1;
-
-
-
 }
 
-header .logo {
+.logo {
+  width: 15.625rem;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
+  margin-left: .625rem;
   padding: 0 auto;
 }
 
 nav {
-  height: 100%;
-  
+  height: 100%;  
 }
 
 nav>ul {
@@ -61,16 +88,14 @@ nav>ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: .9375rem;
   margin-top: 0;
 }
 
-nav>ul>li {
-  
+nav>ul>li {  
   display: flex;
   align-items: center;
-  position: relative;
-  
+  position: relative;  
 }
 
 nav>ul>li>a {
@@ -79,135 +104,130 @@ nav>ul>li>a {
   justify-content: center;
   width: 100%;
   color: rgb(250, 250, 250);
-  font-size: 16px;
-  padding: 0px 20px;
+  font-size: 1em;
+  padding: 0px 1.25rem;
   text-shadow: 1px 1px 1.5px hsl(0, 0%, 5%);
-
 }
 
 .active {
-  background-color: rgba(221, 218, 212, 0.5);
+  background-color: rgba(221, 218, 212,0.5);
   *border-radius: 25px;
 }
 
 nav ul li ul {
   list-style: none;
-  top: 45px;
-  left: 5px;
-  padding: 10px 15px 5px 15px;
+  top: 2.8125rem;
+  left: .3125rem;
+  padding: .625rem .9375rem .3125rem .9375rem;
   position: absolute;
-  width: 250px;
+  width: 15.625rem;
   display: flex;
   flex-direction: column;
   background: rgb(127, 134, 142);
   visibility: hidden;
   box-shadow: 1px 1px 2px black;
   transition: all 300ms ease;
-
 }
 
 nav ul li{
-  padding: 5px 0;
+  padding: .3125rem 0;
 }
 
 nav ul li:hover ul {
-
   visibility: visible;
   opacity: 1;
-  top: 50px;
+  top: 3.125rem;
   transition: all 300MS ease;
-
 }
 
 nav ul li a {
   display: block;
   color: #ffffff;
-  font-size: 16px;
-  padding: 10px 10px;
+  font-size: 1em;
+  padding: .625rem .625rem;
   text-shadow: 1px 1px 1.5px hsl(0, 0%, 5%);
 }
 
-nav ul li ul a:hover {
-  
-  background: rgba(249, 191, 68, 0.5);
-  box-shadow: 1px 1px 1px rgb(77, 76, 76);
+nav ul li ul a:hover {  
+  display: block;
+  color: #000000;
+  text-shadow: none;
+  background: rgb(255, 255, 255);
+  box-shadow: 1px 1px 5px rgb(77, 76, 76);
   transform: scale(1.1);
-  transition: all 300ms ease;
- 
+  transition: all 300ms ease; 
 }
 
 
 nav>ul>li>a:hover {
-  background: rgba(249, 191, 68, 0.5);
+  display: block;
+  color: #000000;
+  text-shadow: none;
+  background: rgb(255, 255, 255);
   transform: scale(1.1);
-  box-shadow: 1px 1px 1px rgb(77, 76, 76);
+  box-shadow: 0.5rem 0.5rem .625rem rgb(90, 89, 89);
   transition: all 300ms ease;
 }
 
 
 
 .containerCover {
-  max-width: 1600px;
+  max-width: 75rem;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  padding: 15px;
-  right: 0;
- 
-
-
+  padding: .9375rem 0px;
+  right: 0; 
 }
 
 .containerCover .containerInfo {
-  margin-top: 10px;
+  margin: 2.5rem 0px 0px 0px;
   font-family: poppins, sans-serif;
   width: 33%;
   /* margin-top: 30px;
-  margin-left: 10px; */
-  *margin: 10px 10px 0 10px;
+  margin-left: 10px; */  
 }
 
 .containerCover h1 {
-  margin-top: -50px;
-  margin-bottom: -35px;
-  max-width: 450px;
-  font-size: 3rem;
+  margin-top: -3.125rem;
+  margin-bottom: -0.9375rem;
+  max-width: 28.125rem;
+  font-size: 3em;
   font-weight: 900;
   color: rgb(242, 174, 29);
   text-shadow: 1px 1px 1px rgb(102, 101, 101);
-
 }
 
 .containerCover h2 {
-  padding-top: -55px;
-  max-width: 400px;
-  font-size: 3rem;
+  padding-top: -3.4375rem;
+  max-width: 25rem;
+  font-size: 3em;
   font-weight: 900;
   color: rgb(240, 78, 39);
   text-shadow: 1px 1px 1px rgb(102, 101, 101);
 }
 
 .containerCover p {
-  margin-top: -5px;
+  margin-top: -0.3125rem;
   text-align: justify;
-  font-size: 0.8rem;
-  margin-right: 35px;
-  padding: 10px;
-
+  font-size: 0.9em;
+  margin-right: 2.1875rem;
+  padding: .625rem;
 }
 
 .containerVector {
+  margin-top: 5rem;
   width: 35%;
   position: relative;
-  left: 50px;
+  left: 3.125rem;
 }
 
 
 .containerVector a img {
   position: relative;
-  bottom: 190px;
+  bottom: 11.875rem;
   width: 90%;
   transition: all 300ms;
   animation: moveVector 6s ease-in-out infinite;
@@ -233,6 +253,7 @@ nav>ul>li>a:hover {
   z-index: -201;
   opacity: 0.4;
   background-repeat: no-repeat;
+  opacity: 0.5;
 }
 
 /* .wave2{
@@ -252,13 +273,12 @@ nav>ul>li>a:hover {
   position: relative;
   width: 40%;
   height: 100%;
-  margin-left: 40px;
+  margin-left: 2.5rem;
   background-color: rgb(131, 131, 131);
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: .3125rem;
   transition: all ease-in .6s;
   list-style: none;
-
 }
 
 .ul {
@@ -266,12 +286,12 @@ nav>ul>li>a:hover {
   display: flex;
   flex-flow: wrap nowrap;
   transition: all ease .6s;
-  border-radius: 1em;
+  border-radius: 1rem;
   list-style: none;
 }
 
 .ul .li .a .img {
-  border-radius: 10px;
+  border-radius: .625rem;
   transition: all 0.6s ease;
 }
 
@@ -283,37 +303,34 @@ nav>ul>li>a:hover {
 .carrusel .li img {
   width: calc(100%);
   cursor: pointer;
-  padding: 0.4em;
+  padding: 0.4rem;
   transition: all 0.6s ease;
-  border-radius: 5px;
+  border-radius: .3125rem;
 }
 
 .carrusel .dots {
   width: 100%;
-  padding: 0.5em 0.2em;
+  padding: 0.5rem 0.2rem;
   background-color: rgb(127, 134, 142);
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   list-style: none;
-
 }
 
 .carrusel .dot {
-  width: 1em;
-  height: 1em;
-  margin: 0.2em;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.2rem;
   background: rgb(242, 174, 29);
   border-radius: 50%;
-
 }
 
 .carrusel .dot:hover {
   background-color: rgb(240, 78, 39);
   cursor: pointer;
   transition: 0.4s ease;
-
 }
 
 .carrusel .dot.activo {
@@ -325,12 +342,12 @@ nav>ul>li>a:hover {
   display: flex;
   color: #111111;
   opacity: 0.5;
-  font-size: 2.5rem;
+  font-size: 2.5em;
   font-weight: 700;
   border-radius: 50%;
   top: 40%;
   position: absolute;
-  padding: 0.4em;
+  padding: 0.4rem;
   cursor: pointer;
   user-select: none;
   transform: translate(0, 0%);
@@ -338,27 +355,25 @@ nav>ul>li>a:hover {
 }
 
 .btnLeft {
-  margin-left: -50px;
+  margin-left: -2rem;
 }
 
 .btnRight {
-  margin-right: -50px;
+  margin-right: -2rem;
 }
 
 .carrusel:hover>.btnLeft {
   display: flex;
   flex-direction: row;
   transform: translate(90%, 0%);
-  transition: all 0.4s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .carrusel:hover>.btnRight {
   display: flex;
   flex-direction: row;
-  transition: all 0.6s ease;
+  transition: all 0.4s ease;
   transform: translate(-90%, 0%);
-
-
 }
 
 .btnLeft:hover,
@@ -371,42 +386,36 @@ nav>ul>li>a:hover {
   right: 1px;
 }
 
-
-
 .footer {
   margin-top: auto;
+  font-family: poppins, sans-serif;
   display: flex;
   width: 100%;
   justify-content: center;
   bottom: 0;
   align-items: center;
-  border-radius: 5px;
-
-
+  border-radius: .3125rem;
 } 
 
 footer {
   width: 100%;
-  height: 100%;
   display: flex;
-  position: relative;
+  flex-direction: row;
+  *position: absolute;
   justify-content: center;
   background-color: rgb(180, 180, 178);
   background-position: bottom;
-  bottom: 0;
-  right: 0;
-  margin-top: 10px;
-  
+  margin-top: auto;  
 }
 
 .containerFooter {
   position: relative;
-  width: 1600px;
+  width: 75rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 15px;
+  padding: 0px .9375rem;
   background-color: rgb(127, 134, 142);
   box-shadow: -1px -1px 2px black;
   right: 0;
@@ -414,15 +423,13 @@ footer {
 
 
 .footerLogo img {
-  *margin-left: 15px;
-  width: 250px;
+   width: 15.625rem;
 }
 
 
 .socialMedia {
   height: 100%;
   font-family: poppins, sans-serif;
-  font-size: 0.8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -433,53 +440,50 @@ footer {
 }
 
 .socialMedia h6 {
-  font-size: 0.8rem;
+  font-size: 0.9em;
   color: #ffffff;
 }
 
 
 .socialMedia a {
-  font-size: 0.8rem;
+  font-size: 0.8em;
   color: #ffffff;
 }
 
 .socialMedia a:hover {
-
   color: rgb(242, 174, 29);
-  transition: all ease .6s;
+  transition: all ease .4s;
 }
 
 .copyright {
-  height: 100%;
-  font-family: poppins, sans-serif;
-  font-size: 0.7rem;
+  height: 100%;  
   display: flex;
   flex-direction: column;
   color: #ffffff;
   text-shadow: 1px 1px 5px black;
   align-items: center;
   justify-content: center;
-  margin-top: 5px;
-  margin-right: 15px;
-
 }
 
-.copyrightP {
-  font-size: 1rem;
+.copyright p{
+  font-size: 0.8em;
+}
+
+.copyright h5{
+  font-size: 1.2em;
 }
 
 
 @keyframes moveVector {
-
   0% {
-    transform: translateY(8px);
+    transform: translateY(.5rem);
   }
 
   25% {
-    transform: translateY(-8px);
+    transform: translateY(-0.5rem);
   }
 
   100% {
-    transform: translateY(8px);
+    transform: translateY(.5rem);
   }
 }
