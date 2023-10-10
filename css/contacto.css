@@ -47,25 +47,7 @@ body {
 
 /*FIN RESET CSS*/
 
-/* .container__formulario{
-  width: 35rem;
-  font-family: poppins, sans-serif;
-  font-size: 1em;
-  display: flex;
-  margin: auto;
-  text-align: left;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff ;
-  border: 1px solid rgb(112, 111, 111);
-  box-shadow: 1px 1px 45px 3px rgb(112, 111, 111) ;
-  border-radius: .9rem;
-  padding: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-} */
-
+/* 
 .container__formulario {
   text-align: left;
   font-family: poppins, sans-serif;
@@ -77,31 +59,42 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.3);
   box-shadow: .0625rem .0625rem 0.8rem -0.2rem black;
   border-radius: .3125rem;
-}
+} */
 
-.container__formulario h2 {
+/* .container__formulario h2 {
   text-align: center;
   color: rgb(240, 78, 39);
   text-shadow: .0625rem .0625rem .6875rem rgb(180, 179, 179);
   font-size: 2.2em;
   margin-top: .625rem;
 }
+ */
 
-/* .formulario {
-  width: 100%;
-  padding: 3.125rem;
-  background-color: #fcfcfc;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
 
 form {
   width: 100%;
   display: flex;
   flex-direction: column;
   text-align: left;
+  text-align: left;
+  font-family: poppins, sans-serif;
+  font-size: 0.8em;
+  width: 40rem;
+  margin: auto;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: .0625rem .0625rem 0.8rem -0.2rem black;
+  border-radius: .3125rem;
+
+}
+
+form h2{
+  text-align: center;
+  color: rgb(240, 78, 39);
+  text-shadow: .0625rem .0625rem .6875rem rgb(180, 179, 179);
+  font-size: 2.2em;
+  margin-top: .625rem;
 }
 
 .formulario {
@@ -127,7 +120,7 @@ width: 80%;
   background-color: rgb(143, 143, 143);
   margin: 10px 0;
   color: #ffffff;
- text-shadow: 1px 1px black;
+ text-shadow: 1px 2px 5px rgb(77, 77, 77);
 
 
 
@@ -150,7 +143,17 @@ width: 80%;
 .form__content>textarea {
 
   border: 1px solid black;
+  resize: none;
+  outline: 0;
+  padding: .625rem;
 }
+
+.form__content>textarea:focus {
+
+  border: 1px solid rgb(160, 2, 2);
+  
+}
+
 
 .btn {
   background-color: rgb(212, 29, 29);
