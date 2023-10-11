@@ -14,7 +14,7 @@
     rel="stylesheet">
   <script src="https://kit.fontawesome.com/1a61aafc27.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
- 
+
 </head>
 
 <body>
@@ -50,32 +50,37 @@
 
 
 
-  <form action="" method="post" autocomplete="off">
+  <form action="" method="post" autocomplete="off" id="formulario">
 
     <h2>Contactanos</h2>
 
     <div class="formulario">
 
-      <div class="form__content">
-        <label for="nombre"> <b>Nombre</b> </label>
-        <input type="text" name="nombre" id="nombre" placeholder="" pattern="[A-Z\sa-z]{3,20}">
-        <p class="formulario__input-error">El campo tiene que ser de 4 a 16 dígitos y solo puede contener letras.</p>
+      <div class="form__content" id="form__content-nombre">
+        <label for="nombre" id="form__content-label"> <b>Nombre</b> </label>
+        <div class="form__content-input">
+          <input type="text" name="nombre" id="nombre" placeholder="" class="formulario-input">
+          <i class="form__content-incorrecto fa-regular fa-circle-xmark"></i>
+          <i class="form__content-correcto fa-regular fa-circle-check"></i>
+        </div>
+
+        <p class="formulario__input-error">El campo tiene que ser de 3 a 16 dígitos y solo puede contener letras.</p>
       </div>
 
       <div class="form__content">
         <label for="apellido"> <b>Apellido</b></label>
-        <input type="text" name="apellido" id="apellido" placeholder="" autocomplete="off" pattern="[A-Z\sa-z]{3,20}">
+        <input type="text" name="apellido" id="apellido" placeholder="" autocomplete="off" class="formulario-input">
         <p class="formulario__input-error">El campo tiene que ser de 4 a 16 dígitos y solo puede contener letras.</p>
       </div>
 
       <div class="form__content">
         <label for="email"> <b>E-mail</b></label>
-        <input type="email" name="email" id="email" placeholder="ejemplo@email.com" >
+        <input type="email" name="email" id="email" placeholder="ejemplo@email.com" class="formulario-input">
       </div>
 
       <div class="form__content">
         <label for="telefono"> <b>Telefono</b></label>
-        <input type="tel" name="telefono" id="telefono" placeholder="" >
+        <input type="tel" name="telefono" id="telefono" placeholder="" class="formulario-input"> 
         <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
       </div>
 

@@ -386,6 +386,166 @@ nav>ul>li>a:hover {
   right: 1px;
 }
 
+.subtitulo{
+  margin-top: -6rem;
+  margin-bottom: -3rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins, sans-serif;
+}
+
+.subtitulo h1{
+  font-size: 3em;
+  font-weight: 900;
+  color: rgb(242, 174, 29);
+  text-shadow: 1px 1px 1px rgb(102, 101, 101);
+  
+}
+
+.subtitulo h2{
+  margin-top: -.9rem;
+  font-size: 3em;
+  font-weight: 900;
+  color: rgb(240, 78, 39);
+  text-shadow: 1px 1px 1px rgb(102, 101, 101);
+}
+
+
+.containerCard {
+
+  max-width: 90%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.25rem;
+  font-family: poppins, sans-serif;
+  perspective: 62.5rem;
+ 
+}
+
+
+.cardPrincipal {
+
+  margin: 2.8rem;
+
+}
+
+.cardPrincipal:hover .card {
+  transform: rotateY(180deg);
+}
+
+
+.card {
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  width: 16.8rem;
+  height: 20rem;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 600ms ease;
+  box-shadow: -1px 1px 10px black;
+}
+
+.cardFront{
+  background-size: cover;
+  background-position: center;
+ 
+}
+
+.cardFront,
+.cardBack {
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  border-radius: 1.25rem;
+
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+
+}
+
+.bodyCardFront{
+  width: 100%;
+  height: 100%;
+  margin-top: -1rem;
+  text-align: center;
+  padding: .8rem;
+  color: rgb(0, 0, 0);
+  font-size: 0.8em;
+  text-shadow: -0.1875rem .1875rem .9375rem  #beb8b8;
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
+  transform: translateZ(60px);
+}
+
+.bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  *background-color: rgba(255, 255, 255);
+  border-radius: 1.25rem;
+
+}
+
+.bodyCardBack{
+
+  padding: .9375rem .9375rem .9375rem .3125rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.bodyCardBack p{
+
+  margin-top: 1.25rem;
+  font-size: 1em;
+}
+
+.bodyCardBack h6{
+
+  margin-top: 1.25rem;
+  font-size: 1.2em;
+}
+
+
+.bodyCardBack input{
+
+  padding: .625rem 1.875rem;
+  margin-top: 1.25rem;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: cornflowerblue;
+  box-shadow: 1px 1px 1px rgb(77, 76, 76);
+  border-radius: .625rem;
+  transition: box-shadow 600ms;
+  
+}
+
+.bodyCardBack input:hover{
+  box-shadow: 1px, 1px, 30px, -5px rgb(rgb(105, 103, 103));
+  transform: scale(1.1);
+  transition: all 300ms ease;
+}
+
 .footer {
   margin-top: auto;
   font-family: poppins, sans-serif;
