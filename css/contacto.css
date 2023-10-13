@@ -77,15 +77,16 @@ form {
   flex-direction: column;
   text-align: left;
   text-align: left;
-  font-family: poppins, sans-serif;
+  font-family: Poppins, sans-serif;
   font-size: 0.8em;
   width: 40rem;
   margin: auto;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  *border: 1px solid rgba(0, 0, 0, 0.3);
   box-shadow: .0625rem .0625rem 0.8rem -0.2rem black;
   border-radius: .3125rem;
+  background-color: rgb(196, 196, 196, 0.5);
 
 }
 
@@ -124,13 +125,13 @@ form h2 {
   border: 2px solid transparent;
   padding: .9375rem .625rem;
   background-color: #ffffff;
-  *border: 1px solid rgba(233, 231, 231, 0.267);
+  outline: none;
 }
 
-.form__content-input:focus {
+.form__content-input input:focus  {
  
-  border: 1px solid rgba(45, 14, 184, 0.267);
-}
+  border: 2px solid rgb(242, 174, 29);
+} 
 
 .form__content-correcto  {
   position: absolute;
@@ -152,7 +153,7 @@ form h2 {
 
 
 
-.formulario label {
+.form__content label {
   display: block;
   padding: .5rem;
   width: 50%;
@@ -161,16 +162,13 @@ form h2 {
   color: #ffffff;
   text-shadow: 1px 2px 5px rgb(77, 77, 77);
   cursor: pointer;
-
-
-
 }
 
-.formulario input {
-  padding: .9375rem .625rem;
-  background-color: #ffffff;
-  *border: 1px solid rgba(73, 72, 72, 0.267);
+.formulario__input-error {
+ font-size: 0.8em;
+ visibility: hidden;
 }
+
 
 .formulario__select {
   display: flex;
@@ -202,7 +200,21 @@ form h2 {
   padding: .9375rem;
   justify-content: center;
   align-self: center;
-  margin-bottom: .9375rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  
+  justify-content: center;
+  background-color: rgb(180, 180, 178);
+  background-position: bottom;
+  margin-top: auto;  
+  
+  
 }
 
 
@@ -225,3 +237,20 @@ form h2 {
 .form_content-incorrecto .formulario-input {
   border: 3px solid #ee1111;
 }
+
+.formulario__input-error-incorrecto {
+  font-size: 0.8em;
+  font-weight: 600;
+  visibility: visible;
+ }
+
+ .formulario__input-error-correcto {
+  font-size: 0.8em;
+  visibility: hidden;
+ }
+
+
+
+
+
+ 

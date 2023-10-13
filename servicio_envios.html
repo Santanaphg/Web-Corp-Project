@@ -7,14 +7,13 @@
 
   <title>Corp_Web_Project</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/contacto.css">
+  <link rel="stylesheet" href="css/nosotros.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
     rel="stylesheet">
   <script src="https://kit.fontawesome.com/1a61aafc27.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+  <script defer src="js/contacto.js"></script>
 </head>
 
 <body>
@@ -29,7 +28,7 @@
           <ul>
             <li><a href="index.html"> Home</a></li>
             <li><a href="nosotros.html"> Nosotros</a></li>
-            <li><a href=""> Servicios</a>
+            <li><a href="#" class="active"> Servicios</a>
               <ul class="submenu">
                 <li><a href="servicio_ebox.html"> e-box®</a></li>
                 <li><a href="servicio_envios.html"> Envíos</a></li>
@@ -39,20 +38,70 @@
               </ul>
             </li>
             <li><a href="ubicacion.html"> Ubicación</a></li>
-            <li><a href="contacto.html" class="active"> Contacto</a></li>
+            <li><a href="contacto.html"> Contacto</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
 
+  <!-- CONTENIDO -->
 
+  <div class="Container-table">
+    <div class="table">
+      <div class="table__img"><img src="assets/img/logistica.png" alt="logistica"></div>
+      <h2>Envios Nacionales e Internacionales.</h2>
+      <table>
+        <tr>
+          <p>A través de los servicios de courier aliados de MBE®, enviamos lo que necesites, a donde indiques y de la
+            manera más eficiente, porque nuestro trabajo es facilitar el tuyo y optimizar tu tiempo. Ya que te
+            brindamos la asesoría que buscas para que puedas utilizar los servicios de envíos internacionales y
+            nacionales disponibles
+            en nuestar red.</p>
 
+        </tr>
+        <br>
+        <tr>
+          <h3>Envíos Internacionales.</h3>
+        </tr>
+
+        <tr>
+          <p>
+            <strong>En Mail Boxes Etc.®</strong> Podrás enviar tus paquetes y documentos a cualquier parte del mundo a
+            través de
+            <strong>DHL</strong> con la misma eficiencia, rapidez y tarifas establecidas por dicha compañía. Visitanos y
+            te ayudaremos
+            con la
+            preparación de toda la documentación requerida, y te orientaremos a la mejor opción para realizar sus
+            envíos.
+          </p>
+        </tr>
+
+        <tr>
+          <h3>Envíos Nacionales</h3>
+        </tr>
+
+        <tr>
+          <p><strong>En Mail Boxes Etc.®</strong> puedes enviar a cualquier destino en el país a través de
+            <strong>Zoom</strong>, y <strong>Domesa</strong>. El
+            servicio de envío nacional entrega paquetes y/o documentos a cualquier residencia o comercio (puerta a
+            puerta) de 24 a 48 horas, con servicio de rastreo online, confirmación de entrega y reporte de seguimiento
+            de tus
+            envíos.</p>
+        </tr>
+
+      </table>
+      
+    </div>
+
+  </div>
 
   <section>
+    <h2>Haz tu cotización</h2>
+
     <form action="" method="post" autocomplete="off" id="formulario">
 
-      <h2>Contactanos</h2>
+
 
       <div class="formulario">
 
@@ -81,7 +130,7 @@
         <div class="form__content" id="form__content-email">
           <label for="email" id="form__content-label"> <b>E-mail</b> </label>
           <div class="form__content-input">
-            <input type="email" name="email" id="email" placeholder="" class="formulario-input">
+            <input type="email" name="email" id="email" placeholder="correo@correo.com" class="formulario-input">
             <i class="form__content-incorrecto fa-solid fa-circle-xmark"></i>
             <i class="form__content-correcto fa-solid fa-circle-check"></i>
           </div>
@@ -101,26 +150,42 @@
         </div>
 
         <div class="form__content">
-          <label for="opciones"><b>Opciones de Contacto</b></label>
+          <label for="opciones"><b>Modalidad de envio</b></label>
           <select class="formulario__select" id="opciones" name="opciones">
             <option value="">--Selecciona una Opción--</option>
-            <option value="cotizacion">Cotización</option>
-            <option value="reclamo">Reclamo</option>
-            <option value="otro">Otro</option>
+            <option value="cotizacion">Nacional</option>
+            <option value="reclamo">Internacional</option>
           </select>
         </div>
 
         <div class="form__content">
-          <label for="message"><b> Su Mensaje</b></label>
-          <textarea name="message" id="message" cols="30" rows="10" placeholder="Inserte un Mensaje"
-            maxlength="350"> </textarea>
+          <label for="opciones"><b>Tipo de contenido</b></label>
+          <select class="formulario__select" id="opciones" name="opciones">
+            <option value="">--Selecciona una Opción--</option>
+            <option value="cotizacion">Documentos</option>
+            <option value="reclamo">Mercancia</option>
+          </select>
         </div>
 
-        <input class="btn" id="btn" type="submit" name="contact" value="Enviar">
+        <div class="form__content">
+          <label class="form__content-label" for="message"><b>Su Mensaje</b></label>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Inserte un Mensaje"
+            maxlength="550"> </textarea>
+        </div>
 
+        <div class="formulario__btn">
+          <input class="btn" id="btn" type="submit" name="contact" value="Enviar">
+        </div>
+
+      </div>
     </form>
 
+   
   </section>
+
+  <div><a href="servicios.html"><input type="button" value="Regresar a Servicios"></a></div>
+
+  <!-- FIN CONTENIDO -->
 
 
 
@@ -159,8 +224,6 @@
     </footer>
   </div>
 
-
-  <script src="js/contacto.js"></script>
 </body>
 
 </html>

@@ -8,37 +8,60 @@ const btn = document.getElementById('btn');
 
 const formulario = document.getElementById("formulario");
 const inputs = document.querySelectorAll("#formulario input");
+const sugerencia = document.querySelectorAll("formulario__input-error");
 
 const expresiones = {
   nombre: /^[a-zA-ZÀ-ÿ\s]{3,20}$/, // Letras y espacios, pueden llevar acentos.
   apellido: /^[a-zA-ZÀ-ÿ\s]{3,20}$/, // Letras y espacios, pueden llevar acentos.
-  correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+  correo: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
   telefono: /^\d{11,14}$/ // 11 a 14 numeros.
 }
 
 const validarFormulario = (e) => {
   switch (e.target.name) {
+
     case "nombre":
-      if (expresiones.nombre.test(e.target.value)){
-        document.getElementById("form__content-nombre").classList.remove("form_content-incorrecto");
-        document.getElementById("form__content-nombre").classList.add("form_content-correcto");
-        document.querySelector("#form__content-nombre i").classList.remove("fa-circle-check");
-        document.querySelector("#form__content-nombre i").classList.add("fa-circle-xmark");
-        
+      validarCampo(expresiones.nombre, e.target, "nombre");
+      break;
 
-      } else{
-        document.getElementById("form__content-nombre").classList.add("form_content-incorrecto");
-        document.getElementById("form__content-nombre").classList.remove("form_content-correcto");
-        document.querySelector("#form__content-nombre i").classList.add("fa-circle-xmark");
-        document.querySelector("#form__content-nombre i").classList.remove("fa-circle-check"); 
+    case "apellido":
+      validarCampo(expresiones.apellido, e.target, "apellido");
+      break;
 
-      }
+    case "email":
+      validarCampo(expresiones.correo, e.target, "email");
+      break;
 
-        break;
+    case "telefono":
+      validarCampo(expresiones.telefono, e.target, "telefono");
+      break;
+
   }
 
-}
+}; 
 
+
+const validarCampo = (expresion, input, campo) => {
+  if (expresion.test(input.value)) {
+    document.getElementById(`form__content-${campo}`).classList.remove("form_content-incorrecto");
+    document.getElementById(`form__content-${campo}`).classList.add("form_content-correcto");
+    document.querySelector(`#form__content-${campo} i`).classList.remove("fa-circle-check");
+    document.querySelector(`#form__content-${campo} i`).classList.add("fa-circle-xmark");
+    document.querySelector(`#form__content-${campo} p`).classList.remove("formulario__input-error-incorrecto");
+    document.querySelector(`#form__content-${campo} p`).classList.add("formulario__input-error-correcto");
+
+
+  } else {
+    document.getElementById(`form__content-${campo}`).classList.add("form_content-incorrecto");
+    document.getElementById(`form__content-${campo}`).classList.remove("form_content-correcto");
+    document.querySelector(`#form__content-${campo} i`).classList.add("fa-circle-xmark");
+    document.querySelector(`#form__content-${campo} i`).classList.remove("fa-circle-check");
+    document.querySelector(`#form__content-${campo} p`).classList.add("formulario__input-error-incorrecto");
+    document.querySelector(`#form__content-${campo} p`).classList.remove("formulario__input-error-correcto");
+
+
+  }
+};
 
 inputs.forEach((input) => {
   input.addEventListener("keyup", validarFormulario);
@@ -79,12 +102,12 @@ function validar() {
       text: 'selecciona una opcion de contacto'
     });
   }
-  else if (mensaje.value === "")
+  else if (mensaje.value === "") {
     Swal.fire({
       icon: 'error',
       text: 'Por favor ingresa un mensaje'
     });
-
+  }
 }
 
 
