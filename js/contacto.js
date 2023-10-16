@@ -5,6 +5,13 @@ const telefono = document.getElementById("telefono");
 const opciones = document.getElementById("opciones");
 const mensaje = document.getElementById("message");
 const btn = document.getElementById('btn');
+const peso = document.getElementById("peso");
+const ciudad = document.getElementById("ciudad");
+const valor = document.getElementById("valor");
+const size = document.getElementById("size");
+const menu = document.getElementById("menu");
+const contenido = document.getElementById("contenido");
+
 
 const formulario = document.getElementById("formulario");
 const inputs = document.querySelectorAll("#formulario input");
@@ -13,7 +20,11 @@ const sugerencia = document.querySelectorAll("formulario__input-error");
 const expresiones = {
   nombre: /^[a-zA-ZÀ-ÿ\s]{3,20}$/, // Letras y espacios, pueden llevar acentos.
   apellido: /^[a-zA-ZÀ-ÿ\s]{3,20}$/, // Letras y espacios, pueden llevar acentos.
+  ciudad: /^[a-zA-ZÀ-ÿ\s]{3,20}$/, // Letras y espacios, pueden llevar acentos.
   correo: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+  peso: /^[\d+(\.\d+)?]{1,4}$/, // 1 a 4 numeros.
+  valor: /^\d{1,4}$/, // 1 a 4 numeros.
+  size: /^[\d+(\.\d+)?]+x[\d+(\.\d+)?]+x[\d+(\.\d+)?]{1,}$/, // 11 a 14 numeros. 
   telefono: /^\d{11,14}$/ // 11 a 14 numeros.
 }
 
@@ -28,6 +39,14 @@ const validarFormulario = (e) => {
       validarCampo(expresiones.apellido, e.target, "apellido");
       break;
 
+    case "ciudad":
+      validarCampo(expresiones.ciudad, e.target, "ciudad");
+      break;
+
+    case "peso":
+      validarCampo(expresiones.peso, e.target, "peso");
+      break;
+
     case "email":
       validarCampo(expresiones.correo, e.target, "email");
       break;
@@ -36,9 +55,18 @@ const validarFormulario = (e) => {
       validarCampo(expresiones.telefono, e.target, "telefono");
       break;
 
+    case "valor":
+      validarCampo(expresiones.valor, e.target, "valor");
+      break;
+
+    case "size":
+      validarCampo(expresiones.size, e.target, "size");
+      break;
+
+
   }
 
-}; 
+};
 
 
 const validarCampo = (expresion, input, campo) => {
@@ -66,7 +94,9 @@ const validarCampo = (expresion, input, campo) => {
 inputs.forEach((input) => {
   input.addEventListener("keyup", validarFormulario);
   input.addEventListener("blur", validarFormulario);
-})
+});
+
+
 
 function validar() {
 
@@ -96,18 +126,49 @@ function validar() {
     });
   }
 
+  else if (menu.value === "") {
+    Swal.fire({
+      icon: 'error',
+      text: 'selecciona una modalidad de envio'
+    });
+  }
+
+  else if (ciudad.value === "") {
+    Swal.fire({
+      icon: 'error',
+      text: 'Por favor ingresa la ciudad de destino'
+    });
+  }
+
+  else if (peso.value === "") {
+    Swal.fire({
+      icon: 'error',
+      text: 'Por favor ingrese un peso'
+    });
+  }
+
   else if (opciones.value === "") {
     Swal.fire({
       icon: 'error',
       text: 'selecciona una opcion de contacto'
     });
   }
+
+  else if (contenido.value === "") {
+    Swal.fire({
+      icon: 'error',
+      text: 'selecciona el tipo de contenido'
+    });
+  }
+
   else if (mensaje.value === "") {
     Swal.fire({
       icon: 'error',
       text: 'Por favor ingresa un mensaje'
     });
   }
+
+
 }
 
 
@@ -120,3 +181,36 @@ document.addEventListener("click", (e) => {
 
 
 });
+
+
+document.addEventListener("change", (e) => {
+  if (e.target === contenido) {
+
+    mostrar();
+  }
+
+
+});
+
+
+function mostrar() {
+  /* let select = document.getElementById("contenido"); */
+  let size = document.getElementById("form__content-size");
+  let valor = document.getElementById("form__content-valor");
+
+
+  if (contenido.value === "mercancia") {
+    document.getElementById("form__content-size").classList.remove("form__content-size");
+    document.getElementById("form__content-size").classList.add("form__content-size-active");
+    document.getElementById("form__content-valor").classList.remove("form__content-valor");
+    document.getElementById("form__content-valor").classList.add("form__content-valor-active");
+
+  } else {
+    document.getElementById("form__content-size").classList.add("form__content-size");
+    document.getElementById("form__content-size").classList.remove("form__content-size-active");
+    document.getElementById("form__content-valor").classList.add("form__content-valor");
+    document.getElementById("form__content-valor").classList.remove("form__content-valor-active");
+
+  };
+
+};

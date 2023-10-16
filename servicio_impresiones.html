@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Corp_Web_Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/servicios-detalle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1a61aafc27.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="js/contacto.js"></script>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="containerAll">
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/mbe logo invert.png" alt="logo"></a>
+            </div>
+            <div class="containerNav">
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html"> Home</a></li>
+                        <li><a href="nosotros.html"> Nosotros</a></li>
+                        <li><a href="#" class="active"> Servicios</a>
+                            <ul class="submenu">
+                                <li><a href="servicio_ebox.html"> e-box®</a></li>
+                                <li><a href="servicio_envios.html"> Envíos</a></li>
+                                <li><a href="servicio_impresiones.html"> Impresión y Fotocopiado</a></li>
+                                <li><a href="#"> Envíos Maritimos</a></li>
+                                <li><a href="#"> Embalajes</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="ubicacion.html"> Ubicación</a></li>
+                        <li><a href="contacto.html"> Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+
+    <div class="Container-table">
+        <div class="table">
+            <div class="table__img"><img src="assets/img/impresion-digital.png" alt="logistica"></div>
+            <h2>Impresiones y Fotocopiado.</h2>
+            <table>
+                <tr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit odit fugit dolores sequi
+                        praesentium iusto. Consequuntur hic asperiores molestias ex a, quibusdam ea, quos officia illum
+                        culpa, nesciunt animi esse?. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                        laudantium iure assumenda? Temporibus ipsa voluptate quibusdam autem! Optio nulla rem enim nemo
+                        animi natus placeat, amet incidunt asperiores reprehenderit omnis.</p>
+
+                </tr>
+                <br>
+                <tr>
+                    <h3>Impresiones Digitales.</h3>
+                </tr>
+
+                <tr>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt esse laborum illum, quaerat
+                        minima repellat reprehenderit nam laudantium dolorem sunt pariatur maxime veritatis sit odit
+                        tempore tenetur ratione? Iure, in?
+                    </p>
+                </tr>
+
+                <tr>
+                    <h3>Fotocopiado</h3>
+                </tr>
+
+                <tr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt id architecto, aperiam eos et
+                        iste cumque illum earum nobis odio, ea nemo debitis neque, laborum voluptas aut libero labore
+                        dolorum.
+                    </p>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <section>
+        <h2>Haz tu cotización</h2>
+
+        <form action="" method="post" autocomplete="off" id="formulario">
+
+
+
+            <div class="formulario">
+
+                <div class="form__content" id="form__content-nombre">
+                    <label for="nombre" id="form__content-label"> <b>Nombre</b> </label>
+                    <div class="form__content-input">
+                        <input type="text" name="nombre" id="nombre" placeholder="" class="formulario-input">
+                        <i class="form__content-incorrecto fa-solid fa-circle-xmark"></i>
+                        <i class="form__content-correcto fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <p class="formulario__input-error">El campo tiene que ser de 3 a 16 dígitos y solo puede contener
+                        letras.</p>
+                </div>
+
+                <div class="form__content" id="form__content-apellido">
+                    <label for="apellido" id="form__content-label"> <b>Apellido</b> </label>
+                    <div class="form__content-input">
+                        <input type="text" name="apellido" id="apellido" placeholder="" class="formulario-input">
+                        <i class="form__content-incorrecto fa-solid fa-circle-xmark"></i>
+                        <i class="form__content-correcto fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <p class="formulario__input-error">El campo tiene que ser de 3 a 16 dígitos y solo puede contener
+                        letras.</p>
+                </div>
+
+                <div class="form__content" id="form__content-email">
+                    <label for="email" id="form__content-label"> <b>E-mail</b> </label>
+                    <div class="form__content-input">
+                        <input type="email" name="email" id="email" placeholder="correo@correo.com"
+                            class="formulario-input">
+                        <i class="form__content-incorrecto fa-solid fa-circle-xmark"></i>
+                        <i class="form__content-correcto fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <p class="formulario__input-error">Por favor, ingrese un correo electronico valido.</p>
+                </div>
+
+                <div class="form__content" id="form__content-telefono">
+                    <label for="telefono" id="form__content-label"> <b>Telefono</b> </label>
+                    <div class="form__content-input">
+                        <input type="tel" name="telefono" id="telefono" placeholder="" class="formulario-input">
+                        <i class="form__content-incorrecto fa-solid fa-circle-xmark"></i>
+                        <i class="form__content-correcto fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <p class="formulario__input-error">El campo solo puede contener numeros de 7 a 14 digitos.</p>
+                </div>
+
+                <div class="form__content">
+                    <label for="opciones"><b>Modalidad de envio</b></label>
+                    <select class="formulario__select" id="menu" name="menu">
+                        <option value="">--Selecciona una Opción--</option>
+                        <option value="nacional">Envío Nacional</option>
+                        <option value="internacional">Envío Internacional</option>
+                    </select>
+                </div>
+
+                <div class="form__content">
+                    <label for="opciones"><b>Tipo de contenido</b></label>
+                    <select class="formulario__select formulario__select-contenido" id="contenido" name="contenido">
+                        <option value="opciones">--Selecciona una Opción--</option>
+                        <option value="documentos">Documentos</option>
+                        <option value="mercancia">Mercancia</option>
+                    </select>
+                </div>
+
+                <div class="form__content" id="form__content-ciudad">
+                    <label for="ciudad" id="form__content-label"> <b>Ciudad de Destino.</b> </label>
+                    <div class="form__content-input">
+                        <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad de destino"
+                            class="formulario-input">
+                        <i class="form__content-incorrecto fa-solid fa-circle-xmark"></i>
+                        <i class="form__content-correcto fa-solid fa-circle-check"></i>
+                    </div>
+                    <p class="formulario__input-error">El campo tiene que ser de 3 a 16 dígitos y solo puede contener
+                        letras.</p>
+                </div>
+
+                <div class="form__content" id="form__content-peso">
+                    <label for="peso" id="form__content-label"> <b>Peso (kg).</b> </label>
+                    <div class="form__content-input">
+                        <input type="text" name="peso" id="peso" placeholder="Ingrese un peso en kg"
+                            class="formulario-input">
+                        <i class="form__content-incorrecto fa-solid fa-circle-xmark"></i>
+                        <i class="form__content-correcto fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <p class="formulario__input-error">El campo solo puede contener numeros. Pueden ser decimales.</p>
+                </div>
+
+                <div class="form__content form__content-valor" id="form__content-valor">
+                    <label for="valor" id="form__content-label"> <b>Valor (USD).</b> </label>
+                    <div class="form__content-input">
+                        <input type="text" name="valor" id="valor" placeholder="Ingrese un valor en USD"
+                            class="formulario-input">
+                        <i class="form__content-incorrecto fa-solid fa-circle-xmark"></i>
+                        <i class="form__content-correcto fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <p class="formulario__input-error">El campo solo puede contener numeros.</p>
+                </div>
+
+
+                <div class="form__content form__content-size" id="form__content-size">
+                    <label for="size" id="form__content-label"> <b>Tamaño en cm.</b> </label>
+                    <div class="form__content-input">
+                        <input type="text" name="size" id="size" placeholder="Ingrese un tamaño (AltoxAnchoxProfudidad)"
+                            class="formulario-input">
+                        <i class="form__content-incorrecto fa-solid fa-circle-xmark"></i>
+                        <i class="form__content-correcto fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <p class="formulario__input-error">El campo solo puede contener numeros.</p>
+                </div>
+
+                <div class="form__content">
+                    <label class="form__content-label" for="message"><b>Su Mensaje</b></label>
+                    <textarea name="message" id="message" cols="30" rows="10"
+                        placeholder="Ingrese un breve detalle de lo que desea enviar, asi como su valor y las medidas del producto o su empaque de ser posible."
+                        maxlength="500"></textarea>
+                </div>
+
+                <div class="formulario__btn">
+                    <input class="btn" id="btn" type="submit" name="contact" value="Enviar">
+                </div>
+
+            </div>
+        </form>
+
+
+    </section>
+    <div class="btn__regresar"><a href="servicios.html"> <input type="button" value="">Regresar a Servicios</a></div>
+
+
+    <!-- FIN CONTENIDO -->
+
+
+
+    <!--INICIO background-->
+
+    <div class="bgColor"></div>
+    <div class="wave1"></div>
+    <div class="wave2"></div>
+
+    <!--FINAL background-->
+
+    <div class="footer">
+        <footer>
+            <div class="containerFooter">
+                <div class="footerLogo">
+                    <img src="assets/img/mbe logo invert.png" alt="logo">
+                </div>
+
+                <div class="socialMedia">
+                    <h6>Visitanos en:</h6>
+                    <a href="https://www.instagram.com/mbe_zulia/" target="_blank"><i class="fa-brands fa-instagram"
+                            style="color: #ffffff;"></i> Instagram</a>
+                    <a href="mailto:ventas@mbezulia.com.ve"><i class="fa-solid fa-envelopes-bulk"
+                            style="color: #ffffff;"></i>
+                        Correo Electronico</a>
+                    <a href="https://wa.me/584246472094" target="_blank"><i class="fa-brands fa-whatsapp"
+                            style="color: #ffffff;"></i> Whatsapp</a>
+                </div>
+
+                <div class="copyright">
+                    <h5> Mail Boxes Etc </h5>
+                    <h5> Zulia</h5>
+                    <p>Todos los derechos reservados © 2023.</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+</body>
+
+</html>

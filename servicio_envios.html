@@ -7,12 +7,13 @@
 
   <title>Corp_Web_Project</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/nosotros.css">
+  <link rel="stylesheet" href="css/servicios-detalle.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
     rel="stylesheet">
   <script src="https://kit.fontawesome.com/1a61aafc27.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script defer src="js/contacto.js"></script>
 </head>
 
@@ -70,9 +71,8 @@
             <strong>En Mail Boxes Etc.®</strong> Podrás enviar tus paquetes y documentos a cualquier parte del mundo a
             través de
             <strong>DHL</strong> con la misma eficiencia, rapidez y tarifas establecidas por dicha compañía. Visitanos y
-            te ayudaremos
-            con la
-            preparación de toda la documentación requerida, y te orientaremos a la mejor opción para realizar sus
+            te ayudaremos con la preparación de toda la documentación requerida, y te orientaremos a la mejor opción
+            para realizar sus
             envíos.
           </p>
         </tr>
@@ -83,15 +83,15 @@
 
         <tr>
           <p><strong>En Mail Boxes Etc.®</strong> puedes enviar a cualquier destino en el país a través de
-            <strong>Zoom</strong>, y <strong>Domesa</strong>. El
-            servicio de envío nacional entrega paquetes y/o documentos a cualquier residencia o comercio (puerta a
-            puerta) de 24 a 48 horas, con servicio de rastreo online, confirmación de entrega y reporte de seguimiento
-            de tus
-            envíos.</p>
+            <strong>Zoom</strong>, y <strong>Domesa</strong>. El servicio de envío nacional entrega paquetes y/o
+            documentos en dos modalidades: la entrega (puerta a puerta) a cualquier residencia o comercio o para ser
+            retirado en cualquiera de las oficinas autorizadas en un lapso de 24 a 48 horas, con servicio de rastreo
+            online, confirmación de entrega y reporte de seguimiento de tus envíos.
+          </p>
         </tr>
 
       </table>
-      
+
     </div>
 
   </div>
@@ -151,26 +151,72 @@
 
         <div class="form__content">
           <label for="opciones"><b>Modalidad de envio</b></label>
-          <select class="formulario__select" id="opciones" name="opciones">
+          <select class="formulario__select" id="menu" name="menu">
             <option value="">--Selecciona una Opción--</option>
-            <option value="cotizacion">Nacional</option>
-            <option value="reclamo">Internacional</option>
+            <option value="nacional">Envío Nacional</option>
+            <option value="internacional">Envío Internacional</option>
           </select>
         </div>
 
         <div class="form__content">
           <label for="opciones"><b>Tipo de contenido</b></label>
-          <select class="formulario__select" id="opciones" name="opciones">
-            <option value="">--Selecciona una Opción--</option>
-            <option value="cotizacion">Documentos</option>
-            <option value="reclamo">Mercancia</option>
+          <select class="formulario__select formulario__select-contenido" id="contenido" name="contenido">
+            <option value="opciones">--Selecciona una Opción--</option>
+            <option value="documentos">Documentos</option>
+            <option value="mercancia">Mercancia</option>
           </select>
+        </div>
+
+        <div class="form__content" id="form__content-ciudad">
+          <label for="ciudad" id="form__content-label"> <b>Ciudad de Destino.</b> </label>
+          <div class="form__content-input">
+            <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad de destino" class="formulario-input">
+            <i class="form__content-incorrecto fa-solid fa-circle-xmark"></i>
+            <i class="form__content-correcto fa-solid fa-circle-check"></i>
+          </div>
+          <p class="formulario__input-error">El campo tiene que ser de 3 a 16 dígitos y solo puede contener letras.</p>
+        </div>
+
+        <div class="form__content" id="form__content-peso">
+          <label for="peso" id="form__content-label"> <b>Peso (kg).</b> </label>
+          <div class="form__content-input">
+            <input type="text" name="peso" id="peso" placeholder="Ingrese un peso en kg" class="formulario-input">
+            <i class="form__content-incorrecto fa-solid fa-circle-xmark"></i>
+            <i class="form__content-correcto fa-solid fa-circle-check"></i>
+          </div>
+
+          <p class="formulario__input-error">El campo solo puede contener numeros. Pueden ser decimales.</p>
+        </div>
+
+        <div class="form__content form__content-valor" id="form__content-valor">
+          <label for="valor" id="form__content-label"> <b>Valor (USD).</b> </label>
+          <div class="form__content-input">
+            <input type="text" name="valor" id="valor" placeholder="Ingrese un valor en USD" class="formulario-input">
+            <i class="form__content-incorrecto fa-solid fa-circle-xmark"></i>
+            <i class="form__content-correcto fa-solid fa-circle-check"></i>
+          </div>
+
+          <p class="formulario__input-error">El campo solo puede contener numeros.</p>
+        </div>
+
+
+        <div class="form__content form__content-size" id="form__content-size">
+          <label for="size" id="form__content-label"> <b>Tamaño en cm.</b> </label>
+          <div class="form__content-input">
+            <input type="text" name="size" id="size" placeholder="Ingrese un tamaño (AltoxAnchoxProfudidad)"
+              class="formulario-input">
+            <i class="form__content-incorrecto fa-solid fa-circle-xmark"></i>
+            <i class="form__content-correcto fa-solid fa-circle-check"></i>
+          </div>
+
+          <p class="formulario__input-error">El campo solo puede contener numeros.</p>
         </div>
 
         <div class="form__content">
           <label class="form__content-label" for="message"><b>Su Mensaje</b></label>
-          <textarea name="message" id="message" cols="30" rows="10" placeholder="Inserte un Mensaje"
-            maxlength="550"> </textarea>
+          <textarea name="message" id="message" cols="30" rows="10"
+            placeholder="Ingrese un breve detalle de lo que desea enviar, asi como su valor y las medidas del producto o su empaque de ser posible."
+            maxlength="500"></textarea>
         </div>
 
         <div class="formulario__btn">
@@ -180,10 +226,11 @@
       </div>
     </form>
 
-   
-  </section>
 
-  <div><a href="servicios.html"><input type="button" value="Regresar a Servicios"></a></div>
+  </section>
+  
+  <div class="btn__regresar"><a href="servicios.html"> <input type="button" value="">Regresar a Servicios</a></div>
+
 
   <!-- FIN CONTENIDO -->
 
