@@ -11,6 +11,7 @@ const valor = document.getElementById("valor");
 const size = document.getElementById("size");
 const menu = document.getElementById("menu");
 const contenido = document.getElementById("contenido");
+const btnForm = document.getElementById("btn-form");
 
 
 const formulario = document.getElementById("formulario");
@@ -98,7 +99,52 @@ inputs.forEach((input) => {
 
 
 
-function validar() {
+function validarContacto() {
+
+  if (nombre.value === "") {
+    Swal.fire({
+      icon: 'error',
+      text: 'Nombre no puede estar vacio'
+    });
+  }
+
+  else if (apellido.value === "") {
+    Swal.fire({
+      icon: 'error',
+      text: 'Apellido no puede estar vacio'
+    });
+  }
+  else if (correo.value === "") {
+    Swal.fire({
+      icon: 'error',
+      text: 'Ingresa un Correo Eectronico'
+    });
+  }
+  else if (telefono.value === "") {
+    Swal.fire({
+      icon: 'error',
+      text: 'Ingesa un numero de telefono'
+    });
+  }
+
+    else if (opciones.value === "") {
+    Swal.fire({
+      icon: 'error',
+      text: 'selecciona una opcion de contacto'
+    });
+  }
+
+   else if (mensaje.value === "") {
+    Swal.fire({
+      icon: 'error',
+      text: 'Por favor ingresa un mensaje'
+    });
+  }
+
+
+}
+
+function validarForm() {
 
   if (nombre.value === "") {
     Swal.fire({
@@ -133,6 +179,7 @@ function validar() {
     });
   }
 
+ 
   else if (ciudad.value === "") {
     Swal.fire({
       icon: 'error',
@@ -146,20 +193,28 @@ function validar() {
       text: 'Por favor ingrese un peso'
     });
   }
+ 
 
-  else if (opciones.value === "") {
-    Swal.fire({
-      icon: 'error',
-      text: 'selecciona una opcion de contacto'
-    });
-  }
-
-  else if (contenido.value === "") {
+/*   else if (contenido.value !== "mercancia" && contenido.value !== "documento") {
     Swal.fire({
       icon: 'error',
       text: 'selecciona el tipo de contenido'
     });
+  } */
+
+ /*  else if (size.value === "") {
+    Swal.fire({
+      icon: 'error',
+      text: 'ingresa el tamano en cm AnchoxAltoxProfundidad'
+    });
   }
+
+  else if (valor.value === "") {
+    Swal.fire({
+      icon: 'error',
+      text: 'por favor ingresa un valor'
+    });
+  } */
 
   else if (mensaje.value === "") {
     Swal.fire({
@@ -173,10 +228,19 @@ function validar() {
 
 
 //evento
+
+document.addEventListener("click", (e) => {
+  if (e.target === btnForm) {
+    e.preventDefault();
+    validarForm();
+  }
+
+
+});
 document.addEventListener("click", (e) => {
   if (e.target === btn) {
     e.preventDefault();
-    validar();
+    validarContacto();
   }
 
 
@@ -214,3 +278,4 @@ function mostrar() {
   };
 
 };
+
