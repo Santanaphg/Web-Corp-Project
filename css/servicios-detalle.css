@@ -422,3 +422,36 @@ form {
   transition: all 300ms ease;
 
 }
+
+.api__content{
+
+  background-color: #00da0b;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 1rem;
+}
+
+.api__content-input input{
+  width: 100%;
+  border: 2px solid transparent;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  padding: .9375rem .625rem;
+  background-color: #ffffff;
+  outline: none;
+  
+}
+
+.api__btn{
+  background-color: rgb(212, 29, 29);
+  color: #ffffff;
+  width: 5rem;
+  padding: .9375rem;
+  justify-content: center;
+  align-self: center;
+  cursor: pointer;
+  
+}
+
